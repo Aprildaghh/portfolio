@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Abdullah Aslan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="/static/css/portfolio-landing-page.css">
+    <!-- 
+    <link rel="stylesheet" type="text/css" th:href="@{/css/portfolio-landing-page.css}">
+    -->
+</head>
+<body>
+
+    <nav>
+        <h2>Abdullah Aslan</h2>
+        <ul>
+            <li>Resume</li>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact Me</li>
+            <li>DK</li>
+        </ul>
+    </nav>
+
+    <div class="container main">
+        <div class="header">
+            <h1>HI I'M ABDULLAH ASLAN</h1>
+            <h2>Software Engineer</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/abdullah-aslan-se/" target="_blank" class="linked-in"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/Aprildaghh" target="_blank" class="github"><i class="bi bi-github"></i></a>
+                <p>abdullah.aslan.se@gmail.com</p>
+            </div>
+        </div>
+        <div class="image-of-a-beautiful-man">
+            <img src="/static/img/image-of-a-beautiful-man.png" alt="image of a beautiful man">
+        </div>
+    </div>
+
+    <div class="container about-me">
+        <div class="about-me-details">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eius incidunt nostrum saepe, pariatur ullam ab sequi ipsum, voluptates perspiciatis doloribus et rem rerum asperiores error laborum dolorem, est dicta impedit. Labore aliquid, nemo corporis quasi alias a, est magnam inventore similique sed repudiandae magni, iste perspiciatis impedit deleniti mollitia!</p>
+            <div class="about-me-modal">Read More</div>
+        </div>
+        <div class="about-me-boxes">
+            <div class="about-me-box">
+                <img src="#" alt="#">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi reprehenderit iure delectus nesciunt expedita, dicta cupiditate excepturi vero velit, quae iste porro numquam cum, reiciendis tempore perspiciatis quos. Explicabo natus doloremque quod rerum ullam, molestias consequatur unde quasi quam est, numquam dolor aperiam obcaecati? Debitis reiciendis nesciunt aperiam natus sapiente!</p>
+            </div>
+            <div class="about-me-box">
+                <img src="#" alt="#">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi reprehenderit iure delectus nesciunt expedita, dicta cupiditate excepturi vero velit, quae iste porro numquam cum, reiciendis tempore perspiciatis quos. Explicabo natus doloremque quod rerum ullam, molestias consequatur unde quasi quam est, numquam dolor aperiam obcaecati? Debitis reiciendis nesciunt aperiam natus sapiente!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container projects">
+        <div class="project">
+            <img src="#" alt="#">
+            
+            <div class="project-details">
+                <h2>PROJECT NAME</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit suscipit minus quod cum neque inventore doloremque molestiae recusandae voluptas a. Aperiam quas ab vitae nisi.</p>
+                <a href="#" class="project-link">See the project</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="#" alt="#">
+            <div class="project-details">
+                <h2>PROJECT NAME</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit suscipit minus quod cum neque inventore doloremque molestiae recusandae voluptas a. Aperiam quas ab vitae nisi.</p>
+                <a href="#" class="project-link">See the project</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container contact">
+        <div class="contact-details">
+            <h2>Contact Me</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit temporibus officiis voluptatum id nobis rem at sit quaerat rerum vitae beatae fugit, consequatur distinctio atque eligendi inventore voluptate. Sed, ratione.</p>
+        </div>
+        <form action="#" class="contact-form">
+            <input type="text" name="username" id="username" placeholder="username">
+            <input type="text" name="email" id="email" placeholder="email">
+            <textarea name="message" id="message" cols="50" rows="6" placeholder="message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  
+    <script src="/static/js/portfolio-landing-page.js"></script>
+    <!--
+    <script th:src="@{/js/portfolio-landing-page.js}"></script>
+    -->
+</body>
+</html>
