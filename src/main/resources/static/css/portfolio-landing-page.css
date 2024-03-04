@@ -2,7 +2,25 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+:root {
+    --color-light: #fff;
+    --color-dark: #29292c;
+
+    --color-background: var(--color-light);
+    --color-foreground: var(--color-dark);
+}
+
+.darkmode {
+    --color-light: #fff;
+    --color-dark: #29292c;
+
+    --color-background: var(--color-dark);
+    --color-foreground: var(--color-light);
+}
+
 body, html {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     width: 100vw;
     box-sizing: border-box;
     margin: 0;
@@ -26,6 +44,7 @@ nav h2 {
 }
 
 nav ul {
+    color: var(--color-foreground);
     display: flex;
     justify-content: row;
     padding-right: 10px;
@@ -39,8 +58,8 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: #29292c;
-    color: white;
+    background-color: var(--color-foreground);
+    color: var(--color-background);
     border-radius: 10px;
     cursor:pointer;
 }
@@ -66,7 +85,7 @@ nav ul li:hover {
 }
 
 .header > h1 {
-    color: #29292c;
+    color: var(--color-foreground);
     font-size: 4rem;
 }
 
@@ -96,6 +115,14 @@ nav ul li:hover {
     text-decoration: none;
 }
 
+.social-links > a > i {
+    color: var(--color-foreground);
+}
+
+.social-links > a > i:hover {
+    color: #5F5C6D;
+}
+
 .image-of-a-beautiful-man {
     justify-content: center;
     align-items: center;
@@ -113,13 +140,20 @@ nav ul li:hover {
     vertical-align: middle;
 }
 
+.about-me-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 15px;
+}
+
 .about-me-details > * {
     padding-bottom: 10px;
 }
 
 .about-me-modal {
-    background-color: #29292c;
-    color: white;
+    background-color: var(--color-foreground);
+    color: var(--color-background);
     text-transform: uppercase;
     display: inline-block;
     text-align: center;
@@ -127,6 +161,7 @@ nav ul li:hover {
     border-radius: 15px;
     cursor:pointer;
     user-select: none;
+    width: 20%;
 }
 
 .about-me-modal:hover {
@@ -146,6 +181,10 @@ nav ul li:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    border: 1px solid var(--color-foreground);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .about-me-box > img {
@@ -197,8 +236,8 @@ nav ul li:hover {
 .project-link {
     text-decoration: none;
     display: inline-block;
-    background-color:#29292c;
-    color: white;
+    background-color:var(--color-foreground);
+    color: var(--color-background);
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
@@ -206,7 +245,7 @@ nav ul li:hover {
 
 .project-link:hover {
     background-color: #5F5C6D;
-    color: white;
+    color: var(--color-background);
 }
 
 .contact {
@@ -239,13 +278,26 @@ nav ul li:hover {
     align-items: center;
     width: 40%;
     margin-top: 2rem;
+    border-radius: 25px;
 }
 
 .contact-form > * {
-    margin: 10px 20px;
-    padding: 5px;
+    padding: 10px 20px;
+    margin: 5px 0;
     width: 75%;
+    border: 2px solid #9ba19b;
+}
 
+.contact-form > input,
+.contact-form > textarea {
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form > input:focus,
+.contact-form > textarea:focus {
+    border-bottom: 4px solid #9ba19b;
+    border-right: 4px solid #9ba19b;
 }
 
 #message {
@@ -257,12 +309,19 @@ nav ul li:hover {
     outline: none;
     border: none;
     border-radius: 15px;
-    background-color: #29292c;
-    color: white;
+    background-color: var(--color-foreground);
+    color: var(--color-background);
 }
 
 .contact-form > button:hover {
     background-color: #5F5C6D;
     cursor: pointer;
-    color: white;
+    color: var(--color-background);
 }
+
+.darkmode-toggle {
+    align-items: center;
+    margin-right: 25px;
+}
+
+
