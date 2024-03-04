@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exiviluxi Presentation</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/exiviluxi/css/presentation.css}">
+</head>
+<body>
+
+    
+    <div class="container">
+        <h1>Your gift is ready</h1>
+        <form th:action="@{/exiviluxi/presentation-password-confirmation/{id}(id=${presentation.id})}" th:object="${presentation}">
+            <div class="input">
+                <label for="password">Password: </label>
+                <input placeholder="password" type="password" name="password" id="password" th:field="*{password}">
+
+            </div>
+            <button type="submit" class="open-button">OPEN</button>
+        </form>
+    </div>
+
+</body>
+</html>

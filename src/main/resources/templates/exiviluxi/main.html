@@ -1,0 +1,44 @@
+<!doctype html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exiviluxi</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/exiviluxi/css/main.css}">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><h1>exiviluxi</h1></div>
+    </nav>
+
+    <main>
+        <div class="content">
+
+            <div class="presentation-creation-div">
+                <form th:action="@{/exiviluxi/presentation-creation}" method="post" class="presentation-creation-form">
+                    <button class="create-btn" th:target="@{/exiviluxi/presentation-creation}">Create Presentation</button>
+                </form>
+            </div>
+
+            <button class="help-button">What does that button do?</button>
+            
+            <div class="informative">
+                <ul>
+                    <li>Create a presentation like page or a video with a nice and memorial background to send it to your loved ones.</li>
+                    <li>After creating your special presentation take the generated qr code and give it to your loved one as a gift with a basket of flowers.</li>
+                    <li>The presentation will be locked till the specified time.</li>
+                    <li>After the timer is finished and the needed password is entered your loved one can see how much you love them.</li>
+                    <li>Only thing you need to do is to just click the button that says "Create Presentation"!</li>
+                </ul>
+            </div>
+            
+        </div>
+    </main>
+
+    <script th:src="@{/exiviluxi/js/main.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exiviluxi Timer</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/exiviluxi/css/timer.css}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="date" th:text="${presentation.date}">2024-02-11</div>
+        <div class="timer"></div>
+        <a class="presentation-button" th:href="@{/exiviluxi/presentation/{id}(id=${presentation.id})}">TO PRESENTATION</a>
+    </div>
+
+    <script th:src="@{/exiviluxi/js/timer.js}"></script>
+
+</body>
+</html>

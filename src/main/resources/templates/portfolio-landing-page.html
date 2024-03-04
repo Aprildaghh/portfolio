@@ -6,10 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     
-    <link rel="stylesheet" href="/static/css/portfolio-landing-page.css">
-    <!-- 
-    <link rel="stylesheet" type="text/css" th:href="@{/css/portfolio-landing-page.css}">
-    -->
+    <link rel="stylesheet" href="/static/main/css/portfolio-landing-page.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/main/css/portfolio-landing-page.css}">
+
 </head>
 <body>
 
@@ -35,7 +34,9 @@
             </div>
         </div>
         <div class="image-of-a-beautiful-man">
-            <img src="/static/img/image-of-a-beautiful-man.png" alt="image of a beautiful man">
+            <img th:src="@{/main/img/image-of-a-beautiful-man.png}" alt="image of a beautiful man">
+
+            <!-- <img src="/static/main/img/image-of-a-beautiful-man.png" alt="image of a beautiful man"> -->
         </div>
     </div>
 
@@ -61,12 +62,12 @@
 
     <div class="container projects">
         <div class="project">
-            <img src="#" alt="#">
+            <img th:src="@{/main/img/project-exiviluxi.png}" alt="exiviluxi">
             
             <div class="project-details">
-                <h2>PROJECT NAME</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit suscipit minus quod cum neque inventore doloremque molestiae recusandae voluptas a. Aperiam quas ab vitae nisi.</p>
-                <a href="#" class="project-link">See the project</a>
+                <h2>Exiviluxi</h2>
+                <p>Exiviluxi is a presentation gift application. App allows you to create a gift presentation by selecting the background color, background image and a video. After creating the presentation exiviluxi grants the user a qr code to the presentation and creates its password. This project uses Spring-MVC on the backend and MySQL on the database while using basic html, css and js on the frontend.</p>
+                <a th:href="@{/exiviluxi/}" class="project-link">See the project</a>
             </div>
         </div>
         <div class="project">
@@ -92,24 +93,21 @@
         </form>
     </div>
 
-    <div class="about-readmore-modal">
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
   
-    <script src="/static/js/portfolio-landing-page.js"></script>
-    <!--
-    <script th:src="@{/js/portfolio-landing-page.js}"></script>
-    -->
+    <script src="/static/main/js/portfolio-landing-page.js"></script>
+    <script th:src="@{/main/js/portfolio-landing-page.js}"></script>
+
 </body>
 </html>
 
 <!-- 
-    4. make it responsive
-    3. add information
+    3. make it responsive
     2. add resume modal
-    1. Add about read more modal
+    1. add information
+    0. remove about read more button
  -->

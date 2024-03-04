@@ -11,9 +11,3 @@ public class PortfolioApplication {
 	}
 
 }
-
-/*
-  drop schema if exists `portfolio`;
-  create schema `portfolio`;
-  USE `portfolio`;
- */
