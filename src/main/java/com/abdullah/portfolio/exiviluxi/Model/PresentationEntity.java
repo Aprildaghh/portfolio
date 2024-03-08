@@ -1,4 +1,4 @@
-package com.abdullah.portfolio.Model;
+package com.abdullah.portfolio.exiviluxi.Model;
 
 import jakarta.persistence.*;
 

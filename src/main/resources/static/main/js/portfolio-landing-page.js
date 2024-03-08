@@ -26,3 +26,18 @@ darkmode.addEventListener("click", () => {
     else
         disableDarkmode();
 });
+
+
+// make scroll top toggle
+const scrollTop = document.querySelector(".scroll-top");
+
+setInterval(() => {
+    if(window.pageYOffset > window.visualViewport.height/2)
+    {
+        scrollTop.style.display = "block";
+    }
+    else {
+        scrollTop.style.display = "none";
+    }
+}, 100);
+

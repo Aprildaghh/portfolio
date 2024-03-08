@@ -15,17 +15,17 @@
     <nav>
         <h2>Abdullah Aslan</h2>
         <ul>
-            <li>Resume</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact Me</li>
+            <li id="nav-resume">Resume</li>
+            <li id="nav-about"><a href="#about">About</a></li>
+            <li id="nav-projects"><a href="#projects">Projects</a></li>
+            <li id="nav-contact"><a href="#contact">Contact Me</a></li>
             <li class="darkmode-toggle"><i class="bi bi-sun"></i></li>
         </ul>
     </nav>
 
     <div class="container main">
         <div class="header">
-            <h1>HI I'M ABDULLAH ASLAN</h1>
+            <h1>HI! I'M ABDULLAH ASLAN</h1>
             <h2>Software Engineer</h2>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/abdullah-aslan-se/" target="_blank" class="linked-in"><i class="bi bi-linkedin"></i></a>
@@ -40,33 +40,52 @@
         </div>
     </div>
 
-    <div class="container about-me">
+    <div class="container about-me" id="about">
         <div class="about-me-details">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eius incidunt nostrum saepe, pariatur ullam ab sequi ipsum, voluptates perspiciatis doloribus et rem rerum asperiores error laborum dolorem, est dicta impedit. Labore aliquid, nemo corporis quasi alias a, est magnam inventore similique sed repudiandae magni, iste perspiciatis impedit deleniti mollitia!</p>
-            <div class="about-me-modal">Read More</div>
+            <p>Hi! I'm Abdullah, a passionate software engineering student based in Turkey, striving to leave a positive mark in the world of technology.</p>
+            <h2>My Journey</h2>
+            <p>My journey in the realm of software engineering began with a fascination for technology and a desire to understand the intricate workings of the digital world. From a young age, I found myself drawn to computers and their endless possibilities, which eventually led me to pursue a degree in software engineering.</p>
+            <p>Throughout my academic journey, I've delved deep into various programming languages, algorithms, and software development methodologies. I've embraced challenges as opportunities for growth, constantly pushing my boundaries to become a better programmer and problem solver.</p>
+            
         </div>
         <div class="about-me-boxes">
             <div class="about-me-box">
-                <img src="#" alt="#">
-                <h2>skill</h2>
-                <p> Sequi repuntitate excepturi vero velit, quae iste porro numquam cum, reiciendis tempore perspiciatis quos. Explicabo natus doloremque quod rerum ullam, molestias consequatur unde quasi quam est, numquam dolor aperiam obcaecati? Debitis reiciendis nesciunt aperiam natus sapiente!</p>
+                <!-- <img src="../static/main/img/prog_lang.jpg" alt="prog_lang"> -->
+                <img th:src="@{main/img/prog_lang.jpg}" alt="prog_lang">
+
+                <p>Proficient in languages such as Java, and JavaScript.</p>
             </div>
             <div class="about-me-box">
-                <img src="#" alt="#">
-                <h2>skill</h2>
-                <p>. sciunt expedita, dicta cupvero velit, quae iste porro numquam cum, reiciendis tempore perspiciatis quos. Explicabo natus doloremque quod rerum ullam, molestias consequatur unde quasi quam est, numquam dolor aperiam obcaecati? Debitis reiciendis nesciunt aperiam natus sapiente!</p>
+                <!-- <img src="../static/main/img/web.png" alt="web"> -->
+                <img th:src="@{main/img/web.png}" alt="web">
+
+                <p>Experienced in web development technologies like HTML, CSS, and Spring Boot.</p>
+            </div>
+            <div class="about-me-box">
+                <!-- <img src="../static/main/img/db.png" alt="db"> -->
+                <img th:src="@{main/img/db.png}" alt="db">
+
+                <p>Familiar with database management systems such as MySQL.</p>
+            </div>
+            <div class="about-me-box">
+                <!-- <img src="../static/main/img/principles.png" alt="principles"> -->
+                <img th:src="@{main/img/principles.png}" alt="principles">
+                <p>Knowledgeable in software engineering principles, including software design patterns and agile methodologies.</p>
             </div>
         </div>
     </div>
 
-    <div class="container projects">
+    <div class="container projects" id="projects">
+        <h1>Projects</h1>
         <div class="project">
             <img th:src="@{/main/img/project-exiviluxi.png}" alt="exiviluxi">
+            <!-- <img src="../static/main/img/project-exiviluxi.png" alt=""> -->
             
             <div class="project-details">
                 <h2>Exiviluxi</h2>
-                <p>Exiviluxi is a presentation gift application. App allows you to create a gift presentation by selecting the background color, background image and a video. After creating the presentation exiviluxi grants the user a qr code to the presentation and creates its password. This project uses Spring-MVC on the backend and MySQL on the database while using basic html, css and js on the frontend.</p>
+                <p>Exiviluxi is a presentation gift application. App allows you to create a gift presentation by selecting the background color, background image and a video. After creating the presentation exiviluxi grants the user a qr code to the presentation and creates its password.</p>
+                <p>This project uses Spring-MVC on the backend and MySQL on the database while using basic html, css and js on the frontend.</p>
                 <a th:href="@{/exiviluxi/}" class="project-link">See the project</a>
             </div>
         </div>
@@ -80,10 +99,11 @@
         </div>
     </div>
 
-    <div class="container contact">
+    <div class="container contact" id="contact">
         <div class="contact-details">
             <h2>Contact Me</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit temporibus officiis voluptatum id nobis rem at sit quaerat rerum vitae beatae fugit, consequatur distinctio atque eligendi inventore voluptate. Sed, ratione.</p>
+            <p>I'm always eager to connect with fellow enthusiasts, developers, and potential collaborators. Whether you're interested in discussing exciting tech trends, collaborating on projects, or simply exchanging ideas, feel free to reach out to me.</p>
+            <p>Thank you for taking the time to learn more about me. I look forward to embarking on this journey together as we explore the boundless possibilities of software engineering.</p>
         </div>
         <form action="#" class="contact-form">
             <input type="text" name="username" id="username" placeholder="username">
@@ -93,6 +113,8 @@
         </form>
     </div>
 
+    <div class="scroll-top">
+        <a href="#"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -107,7 +129,6 @@
 
 <!-- 
     3. make it responsive
-    2. add resume modal
-    1. add information
-    0. remove about read more button
+    2. add projects and their modals
+    1. add resume modal and make resume downloadable
  -->

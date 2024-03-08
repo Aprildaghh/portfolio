@@ -1,6 +1,6 @@
-package com.abdullah.portfolio.Dao;
+package com.abdullah.portfolio.exiviluxi.Dao;
 
-import com.abdullah.portfolio.Model.PresentationEntity;
+import com.abdullah.portfolio.exiviluxi.Model.PresentationEntity;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

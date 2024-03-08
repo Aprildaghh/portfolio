@@ -1,7 +1,7 @@
 package com.abdullah.portfolio.Controllers;
 
-import com.abdullah.portfolio.Model.PresentationEntity;
-import com.abdullah.portfolio.Service.PresentationService;
+import com.abdullah.portfolio.exiviluxi.Model.PresentationEntity;
+import com.abdullah.portfolio.exiviluxi.Service.PresentationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

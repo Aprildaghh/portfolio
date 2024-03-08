@@ -1,7 +1,7 @@
-package com.abdullah.portfolio.Service;
+package com.abdullah.portfolio.exiviluxi.Service;
 
-import com.abdullah.portfolio.Dao.PresentationDao;
-import com.abdullah.portfolio.Model.PresentationEntity;
+import com.abdullah.portfolio.exiviluxi.Dao.PresentationDao;
+import com.abdullah.portfolio.exiviluxi.Model.PresentationEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
