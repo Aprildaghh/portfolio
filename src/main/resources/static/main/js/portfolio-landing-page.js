@@ -41,3 +41,25 @@ setInterval(() => {
     }
 }, 100);
 
+
+// resume modal close and open
+const resumeBtn = document.getElementById("nav-resume");
+const blurModal = document.querySelector(".resume-modal-blur");
+const resumeModal = document.querySelector(".resume-modal");
+
+resumeBtn.addEventListener("click", () => {
+    $(".resume-modal-blur").fadeIn(500);
+    $(".resume-modal").fadeIn(500);
+    blurModal.style.display = "block";
+    resumeModal.style.display = "flex";
+    
+})
+
+resumeModal.addEventListener("click", ()=> {
+    $(".resume-modal-blur").fadeOut(500);
+    $(".resume-modal").fadeOut(500);
+    setTimeout(()=> {
+        blurModal.style.display = "none";
+        resumeModal.style.display = "none";
+    }, 500);
+})

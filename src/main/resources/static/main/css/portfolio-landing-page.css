@@ -377,15 +377,47 @@ nav ul li a:hover {
 .scroll-top a i {
     font-size: 2rem;
     color: var(--color-foreground);
-
 }
 
 .scroll-top a:hover {
     background-color: var(--color-foreground);
-    
 }
 
 .scroll-top a i:hover {
     color: var(--color-background);
+}
 
+/* RESUME MODAL */
+.resume-modal-blur {
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-background) center no-repeat cover;
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    display: none;
+}
+.resume-modal {
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    display: none;
+    border-radius: 10px;
+}
+
+.resume-content {
+    width: 75%;
+    height: 80vh;
+}
+
+.resume-content embed {
+    width: 100%;
+    height: 100%;
 }
