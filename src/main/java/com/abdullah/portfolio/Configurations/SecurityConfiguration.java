@@ -3,6 +3,7 @@ package com.abdullah.portfolio.Configurations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -18,7 +19,9 @@ public class SecurityConfiguration {
                 )
                 .headers(httpSecurityHeadersConfigurer ->
                         httpSecurityHeadersConfigurer
-                                .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
+                                .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
+                .cors(AbstractHttpConfigurer::disable)
+                .csrf(AbstractHttpConfigurer::disable);
 
         return http.build();
     }
