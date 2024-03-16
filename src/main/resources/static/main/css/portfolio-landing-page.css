@@ -10,6 +10,7 @@
     --color-foreground: var(--color-dark);
 }
 
+
 .darkmode {
     --color-light: #fff;
     --color-dark: #29292c;
@@ -54,7 +55,6 @@ nav h2 {
 nav ul {
     color: var(--color-foreground);
     display: flex;
-    justify-content: row;
     padding-right: 10px;
 }
 
@@ -63,6 +63,7 @@ nav ul li {
     margin: 20px 20px 10px 10px;
     padding: 5px 10px;
     font-size: 1.6rem;
+    text-align: center;
 }
 
 nav ul li a {
@@ -82,6 +83,10 @@ nav ul li a:hover {
 
 }
 
+.list-icon {
+    display:none;
+}
+
 /* MAIN */
 .container {
     width: 100%;
@@ -93,8 +98,6 @@ nav ul li a:hover {
     grid-template-columns: 60% 40%;
     margin-bottom: 5rem;
 }
-
-/* HEADER SECTION */
 
 .header {
     text-align: center;
@@ -122,10 +125,13 @@ nav ul li a:hover {
     justify-content: space-evenly;
     padding: 0 25%;
     vertical-align: middle;
+    flex-wrap: wrap;
 }
 
 .social-links > * {
     font-size: 1.5rem;
+    padding: 30px;
+    display: inline-block;
 }
 .social-links > p {
     padding: auto 0;
@@ -138,6 +144,7 @@ nav ul li a:hover {
 
 .social-links > a > i {
     color: var(--color-foreground);
+    font-size: 2rem;
 }
 
 .social-links > a > i:hover {
@@ -168,9 +175,14 @@ nav ul li a:hover {
     padding-right: 15px;
 }
 
-.about-me-details > h2 {
+.about-me-details > h1 {
     font-weight: bolder;
-    font-size: 2.3rem;
+    font-size: 2.8rem;
+}
+
+.about-me-details > h2 {
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .about-me-details > p {
@@ -179,23 +191,6 @@ nav ul li a:hover {
 
 .about-me-details > * {
     padding-bottom: 10px;
-}
-
-.about-me-modal {
-    background-color: var(--color-foreground);
-    color: var(--color-background);
-    text-transform: uppercase;
-    display: inline-block;
-    text-align: center;
-    padding: 10px;
-    border-radius: 15px;
-    cursor:pointer;
-    user-select: none;
-    width: 20%;
-}
-
-.about-me-modal:hover {
-    background-color: #5F5C6D;
 }
 
 .about-me-boxes {
@@ -326,7 +321,7 @@ nav ul li a:hover {
     padding: 10px 20px;
     margin: 5px 0;
     width: 75%;
-    border: 2px solid #9ba19b;
+    border: 2px solid #a19b9c;
 }
 
 .contact-form > input,
@@ -420,4 +415,165 @@ nav ul li a:hover {
 .resume-content embed {
     width: 100%;
     height: 100%;
+}
+
+/* EMAILSENT MODAL */
+.emailsent-modal {
+    position:fixed;
+    top: 50px;
+    left: 50%;
+    width: 30%;
+    height: 150px;
+    border: 1px solid var(--color-background);
+    background-color: #6d6d85;
+    color: var(--color-background);
+    border-radius: 50px;
+    margin-left: -15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+    display: none;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 770px)
+{
+
+    /* NAVBAR */
+    nav ul {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-background);
+        top: 0;
+        left: -100%;
+        display: block;
+        text-align: center;
+        flex-direction: column;
+        padding: 10px 0;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        font-size: 1.6rem;
+        display: block;
+        line-height: 60px;
+    }
+
+    nav ul li:hover {
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+    }
+    
+    .list-icon {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        display: block;
+        color: var(--color-foreground);
+        font-size: 2rem;
+        z-index: 6;
+    }
+
+    /* MAIN */
+    .main {
+        width: 100%;
+        display: flex;
+        margin: 0 auto 5rem auto;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .image-of-a-beautiful-man {
+        width: 75%;
+        justify-content: center;
+    }
+
+    .header > h1 {
+        font-size: 3rem;
+    }
+    
+    .header > h2 {
+        font-size: 2rem;
+    }
+
+    /* ABOUT ME */
+    .about-me-details {
+        padding-right: 0;
+    }
+
+    .about-me-details > h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-me-details > h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-me-details > p {
+        font-size: 1.2rem;
+    }
+
+    /* PROJECTS */
+    .projects > h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project:nth-child(odd){
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .project-details {
+        margin: 20px 0;
+    }
+
+    /* CONTACT ME */
+    .contact {
+        flex-direction: column;
+        margin: 0 10px;
+    }
+
+    .contact-details {
+        width: 100%;
+    }
+
+    .contact-details > h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-details > p {
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 395px)
+{
+    /* MAIN */
+    .social-links > a > i {
+        font-size: 1.4rem;
+    }
+
+    .header > h2 {
+        font-size: 1.8rem;
+    }
+
+    /* ABOUT ME */
+    .about-me-boxes {
+        grid-template-columns: 100%;
+    }
+
 }

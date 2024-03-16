@@ -35,7 +35,7 @@ public class PortfolioController {
     {
         // validate
         if(!isValid(email))
-            return "redirect:/?wrong-credentials";
+            return "redirect:/#contact?wrong-credentials";
 
         String message = email.getUsername() + "\n --- \n" + email.getEmail() + "\n --- \n" + email.getMessage();
         emailService.sendEmail("agomikoroz@gmail.com", "PORTFOLIO PROJECT", message);

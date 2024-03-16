@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     
     <link rel="stylesheet" type="text/css" th:href="@{/main/css/portfolio-landing-page.css}">
+    <link rel="stylesheet" href="../static/main/css/portfolio-landing-page.css">
 
 </head>
 <body>
@@ -17,12 +18,13 @@
     <nav>
         <h2>Abdullah Aslan</h2>
         <ul>
-            <li id="nav-resume">Resume</li>
+            <li class="nav-resume">Resume</li>
             <li id="nav-about"><a href="#about">About</a></li>
             <li id="nav-projects"><a href="#projects">Projects</a></li>
             <li id="nav-contact"><a href="#contact">Contact Me</a></li>
             <li class="darkmode-toggle"><i class="bi bi-sun"></i></li>
         </ul>
+        <div class="list-icon"><i class="bi bi-list"></i></div>
     </nav>
 
     <div class="container main">
@@ -36,13 +38,16 @@
             </div>
         </div>
         <div class="image-of-a-beautiful-man">
+            <img src="../static/main/img/image-of-a-beautiful-man.png" alt="image of a beautiful man">
+<!--
             <img th:src="@{/main/img/image-of-a-beautiful-man.png}" alt="image of a beautiful man">
+-->
         </div>
     </div>
 
     <div class="container about-me" id="about">
         <div class="about-me-details">
-            <h2>About Me</h2>
+            <h1>About Me</h1>
             <p>Hi! I'm Abdullah, a passionate software engineering student based in Turkey, striving to leave a positive mark in the world of technology.</p>
             <h2>My Journey</h2>
             <p>My journey in the realm of software engineering began with a fascination for technology and a desire to understand the intricate workings of the digital world. From a young age, I found myself drawn to computers and their endless possibilities, which eventually led me to pursue a degree in software engineering.</p>
@@ -51,19 +56,31 @@
         </div>
         <div class="about-me-boxes">
             <div class="about-me-box">
+                <img src="../static/main/img/prog_lang.jpg" alt="prog_lang">
+<!--
                 <img th:src="@{main/img/prog_lang.jpg}" alt="prog_lang">
+-->
                 <p>Proficient in languages such as Java, and JavaScript.</p>
             </div>
             <div class="about-me-box">
+                <img src="../static/main/img/web.png" alt="web">
+                <!--
                 <img th:src="@{main/img/web.png}" alt="web">
+                -->
                 <p>Experienced in web development technologies like HTML, CSS, and Spring Boot.</p>
             </div>
             <div class="about-me-box">
+                <img src="../static/main/img/db.png" alt="db">
+                <!--
                 <img th:src="@{main/img/db.png}" alt="db">
+                -->
                 <p>Familiar with database management systems such as MySQL.</p>
             </div>
             <div class="about-me-box">
+                <img src="../static/main/img/principles.png" alt="principles">
+                <!--
                 <img th:src="@{main/img/principles.png}" alt="principles">
+                -->
                 <p>Knowledgeable in software engineering principles, including software design patterns and agile methodologies.</p>
             </div>
         </div>
@@ -72,7 +89,10 @@
     <div class="container projects" id="projects">
         <h1>Projects</h1>
         <div class="project">
+            <img src="../static/main/img/project-exiviluxi.png" alt="exiviluxi">
+            <!--
             <img th:src="@{/main/img/project-exiviluxi.png}" alt="exiviluxi">
+            -->
             <div class="project-details">
                 <h2>Exiviluxi</h2>
                 <p>Exiviluxi is a presentation gift application. App allows you to create a gift presentation by selecting the background color, background image and a video. After creating the presentation exiviluxi grants the user a qr code to the presentation and creates its password.</p>
@@ -81,7 +101,10 @@
             </div>
         </div>
         <div class="project">
+            <img src="../static/main/img/aqukanali.png" alt="aqukanali">
+            <!--
             <img th:src="@{/main/img/aqukanali.png}" alt="aqukanali">
+            -->
             <div class="project-details">
                 <h2>Aqukanali</h2>
                 <p>AQUKANALI is a todo like console project.</p>
@@ -91,7 +114,10 @@
             </div>
         </div>
         <div class="project">
+            <img src="../static/main/img/onecayepeyo.png" alt="onecayepeyo">
+            <!--
             <img th:src="@{/main/img/onecayepeyo.png}" alt="onecayepeyo">
+            -->
             <div class="project-details">
                 <h2>Onecayepeyo</h2>
                 <p>This project is a "coffee maker" application and is designed as a desktop application with a GUI which communicates with a MySql database.</p>
@@ -100,7 +126,10 @@
             </div>
         </div>
         <div class="project">
+            <img src="../static/main/img/awidosozi.png" alt="awidosozi">
+            <!--
             <img th:src="@{/main/img/awidosozi.png}" alt="awidosozi">
+            -->
             <div class="project-details">
                 <h2>Awidosozi</h2>
                 <p>This is a name generator project with swing GUI.</p>
@@ -142,6 +171,11 @@
         </div>
     </div>
 
+    <div class="popup-modal">
+        <h1></h1>
+    </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
@@ -149,11 +183,9 @@
   
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <script>
-        const emailUrl = "[[@{/email/send}]]";
-    </script>
-
     <script th:src="@{/main/js/portfolio-landing-page.js}"></script>
+
+    <script src="../static/main/js/portfolio-landing-page.js"></script>
 
 </body>
 </html>
