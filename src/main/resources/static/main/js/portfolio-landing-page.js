@@ -1,5 +1,3 @@
-
-
 $(function () {
     // darkmode
     const darkmode = document.querySelector(".darkmode-toggle");
@@ -66,46 +64,6 @@ $(function () {
             resumeModal.style.display = "none";
         }, 500);
     })
-
-    // check the inputs and enable/disable the submit button according to validations
-    const usernameInput = document.getElementById("username");
-    const emailInput = document.getElementById("email");
-    const messageInput = document.getElementById("message");
-    const submitBtn = document.getElementById("contact-submit");
-    const regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
-
-    function isEmpty(val){
-        return (val === undefined || val == null || val.length <= 0) ? true : false;
-    }
-
-    setInterval(() => {
-        if(isEmpty(usernameInput.value) || isEmpty(messageInput.value) || !regex.test(emailInput.value))
-        {
-            submitBtn.disabled = true;
-        }
-        else
-            submitBtn.disabled = false;
-        
-    }, 1000);
-
-    // create a modal if the url has emailsent, create error messages if the url has wrong-credentials
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const isEmailSent = urlParams.get("emailsent");
-    const isWrongCredentials = urlParams.get("wrong-credentials");
-
-    if(isEmailSent !== null)
-    {
-        document.querySelector(".popup-modal h1").innerHTML = "Sending email was successfull!!";
-        document.querySelector(".popup-modal").style.display = "flex";
-        $(".popup-modal").fadeOut(2000);
-    }
-    else if(isWrongCredentials !== null)
-    {
-        document.querySelector(".popup-modal h1").innerHTML = "Wrong information on contact form!!";
-        document.querySelector(".popup-modal").style.display = "flex";
-        $(".popup-modal").fadeOut(2000);
-    }
 
     // hamburger list
     const listIcon = document.querySelector(".list-icon");
